@@ -9,10 +9,10 @@ To use the 1.1.17-SNAPSHOT locally:
 1. Run `mvn install` on this repository
 2. Modify your `build.sbt` to add the local Maven resolver, `resolvers += Resolver.mavenLocal`
 
-Notes
------
+Java 8 and Maven
+----------------
 
-You will need _Java 8_ and Maven. To install it on Mac, 
+You will need _Java 8_ and Maven. To install it on __Mac__,
 
 ```bash
 brew tap caskroom/versions
@@ -32,6 +32,18 @@ Then before running any Java related command you can switch among them. You can 
 ```
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 ```
+
+In case of installing Java 8 on __Linux__:
+
+```bash
+sudo apt-get install openjdk-8-jdk
+update-java-alternatives --list
+sudo update-java-alternatives --set /path/to/java-8
+```
+
+It is also recommended to follow the [instructions on installing sbt on Linux](https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Linux.html).
+
+In both platforms you can also use [sdkman](https://sdkman.io/install) to manage different java/scala versions.
 
 Downloading
 -----------
